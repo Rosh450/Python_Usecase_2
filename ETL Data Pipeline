@@ -1,17 +1,17 @@
-2. ETL Data Pipeline (Database → Cloud Data Warehouse)
+ETL Data Pipeline (Database → Cloud Data Warehouse)
 
 Use case: Move data from operational database to analytics system.
 Example workflow:
-Extract data from MySQL
-Transform using Python (clean, filter, aggregate)
-Load into data warehouse
-Cloud services:
-Amazon Web Services Redshift
-Google BigQuery
-Microsoft Azure SQL
+    Extract data from MySQL
+    Transform using Python (clean, filter, aggregate)
+    Load into data warehouse
+    Cloud services:
+    Amazon Web Services Redshift
+    Google BigQuery
+    Microsoft Azure SQL
+
 Example:
-Python
-Copy code
+
 import pandas as pd
 import mysql.connector
  
