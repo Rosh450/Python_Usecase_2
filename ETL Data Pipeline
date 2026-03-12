@@ -1,0 +1,31 @@
+2. ETL Data Pipeline (Database → Cloud Data Warehouse)
+
+Use case: Move data from operational database to analytics system.
+Example workflow:
+Extract data from MySQL
+Transform using Python (clean, filter, aggregate)
+Load into data warehouse
+Cloud services:
+Amazon Web Services Redshift
+Google BigQuery
+Microsoft Azure SQL
+Example:
+Python
+Copy code
+import pandas as pd
+import mysql.connector
+ 
+conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="123",
+    database="sales"
+)
+ 
+query = "SELECT * FROM orders"
+df = pd.read_sql(query, conn)
+ 
+# transformation
+df['total'] = df['price'] * df['quantity']
+ 
+df.to_csv("processed_orders.csv", index=False)
